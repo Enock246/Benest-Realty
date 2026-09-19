@@ -14,14 +14,27 @@ interface Props {
 export default function PropertyModal({ property, onClose }: Props) {
   const [imgIndex, setImgIndex] = useState(0);
 
-  // Lock scroll when open
+  // Lock scroll when open — robust fix for iOS Safari
   useEffect(() => {
     if (property) {
-      document.body.classList.add("no-scroll");
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
     } else {
-      document.body.classList.remove("no-scroll");
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
-    return () => document.body.classList.remove("no-scroll");
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    };
   }, [property]);
 
   if (!property) return null;

@@ -21,6 +21,7 @@
   background: var(--navy);
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   animation: slideUp 0.5s var(--ease);
