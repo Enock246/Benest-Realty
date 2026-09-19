@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Center of rotation is 250, 250. Rotate -45 degrees. -->
+  <!-- Scaled up tightly to fill the viewBox, maximizing image visibility while keeping thick gaps -->
+  <g transform="rotate(-45 250 250)">
+    <!-- Pill 1 (Left - Shortest) -->
+    <rect x="42.5" y="130" width="85" height="240" rx="42.5" fill="black"/>
+    
+    <!-- Pill 2 (Center Left - Tallest) -->
+    <rect x="152.5" y="30" width="85" height="440" rx="42.5" fill="black"/>
+    
+    <!-- Pill 3 (Center Right - Tall, shifted down) -->
+    <rect x="262.5" y="60" width="85" height="420" rx="42.5" fill="black"/>
+    
+    <!-- Pill 4 (Right - Short) -->
+    <rect x="372.5" y="120" width="85" height="260" rx="42.5" fill="black"/>
+  </g>
+</svg>

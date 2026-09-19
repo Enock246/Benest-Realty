@@ -1,0 +1,123 @@
+:root {
+  /* Airbnb Minimalist Palette */
+  --mustard: #EAB308; /* Kept for brand identity */
+  --mustard-dark: #CA8A04;
+  --navy: #222222; /* Airbnb 'Ink' - Near black */
+  --navy-light: #3f3f3f; /* Airbnb 'Body' */
+  --white: #FFFFFF;
+  --off-white: #f7f7f7; /* Airbnb 'Surface Soft' */
+  --gray-light: #ebebeb; /* Airbnb 'Hairline Soft' */
+  --gray-dark: #717171; /* Airbnb 'Muted' */
+  
+  --font-head: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  --font-body: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+  --dur: 200ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+button:active {
+  transform: scale(0.96); /* Airbnb's signature tap feel */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--navy-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px; /* Airbnb standard max width */
+  margin: 0 auto;
+  padding: 0 24px; /* Airbnb standard padding */
+}
+
+/* Primary Buttons (Airbnb Style) */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 24px;
+  height: 48px;
+  border-radius: 8px; /* Airbnb's {rounded.sm} */
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 16px;
+}
+.btn-dark:hover {
+  background: #000000;
+}
+
+.btn-mustard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mustard);
+  color: var(--white); /* White text is much cleaner on mustard in a minimalist system */
+  padding: 14px 24px;
+  height: 48px;
+  border-radius: 8px; /* Airbnb's {rounded.sm} */
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 16px;
+}
+.btn-mustard:hover {
+  background: var(--mustard-dark);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .btn-dark, .btn-mustard {
+    padding: 10px 16px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
