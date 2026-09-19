@@ -29,10 +29,9 @@ export default function Home() {
       start: "top 85%",
       onEnter: (elements, triggers) => {
         gsap.fromTo(elements,
-          { opacity: 0, y: 20 },
+          { opacity: 0 },
           {
             opacity: 1,
-            y: 0,
             duration: 0.8,
             stagger: 0.15,
             ease: "power2.out", // Classic, standard, ultra-smooth fade
