@@ -3,9 +3,9 @@
   inset: 0;
   background: rgba(23, 30, 43, 0.9);
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   animation: fadeIn 0.4s var(--ease);
 }
 
@@ -16,12 +16,9 @@
 
 .card {
   position: relative;
-  width: 100vw;
-  height: 100dvh;
+  width: 100%;
+  min-height: 100%;
   background: var(--navy);
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   animation: slideUp 0.5s var(--ease);
