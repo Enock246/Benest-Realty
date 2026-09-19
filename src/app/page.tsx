@@ -237,7 +237,7 @@ export default function Home() {
               <p className={styles.airbnbSubText}>{prop1.specs.beds} Beds · {prop1.specs.baths} Baths</p>
               <p className={styles.airbnbSubText}>Exclusive high-rise</p>
               <div className={styles.airbnbPriceRow}>
-                <span className={styles.airbnbPriceBold}>{formatPrice(prop1)}</span>
+                <span className={styles.airbnbPriceBold} style={{ filter: 'blur(5px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.85 }}>{formatPrice(prop1)}</span>
                 <span className={styles.airbnbPriceUnit}> / {prop1.priceUnit.replace('per ', '')}</span>
               </div>
             </div>

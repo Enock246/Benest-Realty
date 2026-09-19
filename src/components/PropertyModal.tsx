@@ -116,7 +116,12 @@ export default function PropertyModal({ property, onClose }: Props) {
               </div>
               <div className={styles.priceRow}>
                 <span className={styles.priceLabel}>Price:</span>
-                <span className={styles.priceValue}>{formatPrice(property)}</span>
+                <span 
+                  className={styles.priceValue}
+                  style={property.id === 'apartment-1' ? { filter: 'blur(5px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.85 } : {}}
+                >
+                  {formatPrice(property)}
+                </span>
               </div>
             </div>
 
