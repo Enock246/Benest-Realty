@@ -15,9 +15,7 @@ export default function Home() {
   // Animation container ref
   
 
-  const prop1 = properties[0]; // Luxurious 2-Bedroom
-  const prop2 = properties[1]; // Luxury Short-Stay
-
+    
   const heroImgSrc = "/assets/apartment-1/area-19.jpeg";
   const maskImgSrc = "/assets/apartment-2/place-12.jpeg"; // specifically requested
 
@@ -174,51 +172,36 @@ export default function Home() {
           </div>
 
           <div className={styles.airbnbGrid2Col}>
-          
-          {/* Card 1 */}
-          <div className={`${styles.airbnbCard}`} onClick={() => setSelectedProperty(prop1)}>
-            <div className={styles.airbnbCardImgWrap}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/apartment-1/Apartment.jpeg" alt={prop1.name} className={styles.airbnbCardImg} />
-              <div className={styles.airbnbCardPill}>View Details</div>
-            </div>
             
-            <div className={styles.airbnbCardBody}>
-              <div className={styles.airbnbTitleRow}>
-                <h3 className={styles.airbnbTitle}>{prop1.name}</h3>
-                <span className={styles.airbnbRating}>★ 4.96</span>
+            {properties.map((prop) => (
+              <div key={prop.id} className={`${styles.airbnbCard}`} onClick={() => setSelectedProperty(prop)}>
+                <div className={styles.airbnbCardImgWrap}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={prop.coverImage} alt={prop.name} className={styles.airbnbCardImg} />
+                  <div className={styles.airbnbCardPill}>View Details</div>
+                </div>
+                
+                <div className={styles.airbnbCardBody}>
+                  <div className={styles.airbnbTitleRow}>
+                    <h3 className={styles.airbnbTitle}>{prop.name}</h3>
+                    <span className={styles.airbnbRating}>★ 4.96</span>
+                  </div>
+                  <p className={styles.airbnbSubText}>{prop.specs.beds} Beds · {prop.specs.baths} Baths</p>
+                  <p className={styles.airbnbSubText}>{prop.location}</p>
+                  <div className={styles.airbnbPriceRow}>
+                    <span 
+                      className={styles.airbnbPriceBold} 
+                      style={prop.id === 'apartment-1' ? { filter: 'blur(5px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.85 } : {}}
+                    >
+                      {formatPrice(prop)}
+                    </span>
+                    <span className={styles.airbnbPriceUnit}> / {prop.priceUnit.replace('per ', '')}</span>
+                  </div>
+                </div>
               </div>
-              <p className={styles.airbnbSubText}>{prop1.specs.beds} Beds · {prop1.specs.baths} Baths</p>
-              <p className={styles.airbnbSubText}>Exclusive high-rise</p>
-              <div className={styles.airbnbPriceRow}>
-                <span className={styles.airbnbPriceBold} style={{ filter: 'blur(5px)', userSelect: 'none', pointerEvents: 'none', opacity: 0.85 }}>{formatPrice(prop1)}</span>
-                <span className={styles.airbnbPriceUnit}> / {prop1.priceUnit.replace('per ', '')}</span>
-              </div>
-            </div>
-          </div>
+            ))}
 
-          {/* Card 2 */}
-          <div className={`${styles.airbnbCard}`} onClick={() => setSelectedProperty(prop2)}>
-            <div className={styles.airbnbCardImgWrap}>
-               {/* eslint-disable-next-line @next/next/no-img-element */}
-               <img src="/assets/apartment-2/Apartment Front.jpeg" alt={prop2.name} className={styles.airbnbCardImg} />
-               <div className={styles.airbnbCardPill}>View Details</div>
-            </div>
-            
-            <div className={styles.airbnbCardBody}>
-              <div className={styles.airbnbTitleRow}>
-                <h3 className={styles.airbnbTitle}>{prop2.name}</h3>
-                <span className={styles.airbnbRating}>★ 4.99</span>
-              </div>
-              <p className={styles.airbnbSubText}>{prop2.specs.beds} Beds · {prop2.specs.baths} Baths</p>
-              <p className={styles.airbnbSubText}>Boundary Road, East Legon</p>
-              <div className={styles.airbnbPriceRow}>
-                <span className={styles.airbnbPriceBold}>{formatPrice(prop2)}</span>
-                <span className={styles.airbnbPriceUnit}> / {prop2.priceUnit.replace('per ', '')}</span>
-              </div>
-            </div>
           </div>
-        </div>
         </div>
       </section>
 
