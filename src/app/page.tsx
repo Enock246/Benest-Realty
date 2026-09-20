@@ -177,7 +177,7 @@ export default function Home() {
               <div key={prop.id} className={`${styles.airbnbCard}`} onClick={() => setSelectedProperty(prop)}>
                 <div className={styles.airbnbCardImgWrap}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={prop.coverImage} alt={prop.name} className={styles.airbnbCardImg} />
+                  <img src={prop.images.hero} alt={prop.name} className={styles.airbnbCardImg} />
                   <div className={styles.airbnbCardPill}>View Details</div>
                 </div>
                 
@@ -187,7 +187,7 @@ export default function Home() {
                     <span className={styles.airbnbRating}>★ 4.96</span>
                   </div>
                   <p className={styles.airbnbSubText}>{prop.specs.beds} Beds · {prop.specs.baths} Baths</p>
-                  <p className={styles.airbnbSubText}>{prop.location}</p>
+                  <p className={styles.airbnbSubText}>{prop.address}</p>
                   <div className={styles.airbnbPriceRow}>
                     <span 
                       className={styles.airbnbPriceBold} 

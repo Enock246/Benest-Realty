@@ -7,27 +7,23 @@ const apartment3: Property = {
   tagline: 'Premium fully furnished apartment just 3 minutes from the airport.',
   status: 'For Rent',
   price: 140,
-  priceUnit: 'per night',
+  priceUnit: 'per day',
   specs: {
     beds: 1,
     baths: 1,
-    sqft: 850
+    sqft: 850,
+    parking: 1
   },
-  location: 'Airport Residential Area',
-  coverImage: '/assets/apartment-3/area-1.jpeg',
-  images: [
-    "/assets/apartment-3/area-1.jpeg",
-    "/assets/apartment-3/area-10.jpeg",
-    "/assets/apartment-3/area-2.jpeg",
-    "/assets/apartment-3/area-3.jpeg",
-    "/assets/apartment-3/area-4.jpeg",
-    "/assets/apartment-3/area-5.jpeg",
-    "/assets/apartment-3/area-6.jpeg",
-    "/assets/apartment-3/area-7.jpeg",
-    "/assets/apartment-3/area-8.jpeg",
-    "/assets/apartment-3/area-9.jpeg"
-],
-  features: [
+  address: 'Airport Residential Area',
+  
+  images: {
+    hero: '/assets/apartment-3/area-1.jpeg',
+    gallery: 
+  },
+  highlights: [
+    'City Views'
+  ],
+  amenities: [
     'Fully Furnished',
     '3 mins from Airport',
     'Air Conditioning',
