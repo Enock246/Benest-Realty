@@ -18,7 +18,39 @@ const apartment4: Property = {
   
   images: {
     hero: '/assets/apartment-4/area-1.jpeg',
-    gallery: 
+    gallery: [
+    "/assets/apartment-4/area-1.jpeg",
+    "/assets/apartment-4/area-10.jpeg",
+    "/assets/apartment-4/area-11.jpeg",
+    "/assets/apartment-4/area-12.jpeg",
+    "/assets/apartment-4/area-13.jpeg",
+    "/assets/apartment-4/area-14.jpeg",
+    "/assets/apartment-4/area-15.jpeg",
+    "/assets/apartment-4/area-16.jpeg",
+    "/assets/apartment-4/area-17.jpeg",
+    "/assets/apartment-4/area-18.jpeg",
+    "/assets/apartment-4/area-19.jpeg",
+    "/assets/apartment-4/area-2.jpeg",
+    "/assets/apartment-4/area-20.jpeg",
+    "/assets/apartment-4/area-21.jpeg",
+    "/assets/apartment-4/area-22.jpeg",
+    "/assets/apartment-4/area-23.jpeg",
+    "/assets/apartment-4/area-24.jpeg",
+    "/assets/apartment-4/area-25.jpeg",
+    "/assets/apartment-4/area-26.jpeg",
+    "/assets/apartment-4/area-27.jpeg",
+    "/assets/apartment-4/area-28.jpeg",
+    "/assets/apartment-4/area-29.jpeg",
+    "/assets/apartment-4/area-3.jpeg",
+    "/assets/apartment-4/area-30.jpeg",
+    "/assets/apartment-4/area-31.jpeg",
+    "/assets/apartment-4/area-4.jpeg",
+    "/assets/apartment-4/area-5.jpeg",
+    "/assets/apartment-4/area-6.jpeg",
+    "/assets/apartment-4/area-7.jpeg",
+    "/assets/apartment-4/area-8.jpeg",
+    "/assets/apartment-4/area-9.jpeg"
+]
   },
   highlights: [
     '13th Floor Views'

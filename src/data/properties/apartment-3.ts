@@ -18,7 +18,18 @@ const apartment3: Property = {
   
   images: {
     hero: '/assets/apartment-3/area-1.jpeg',
-    gallery: 
+    gallery: [
+    "/assets/apartment-3/area-1.jpeg",
+    "/assets/apartment-3/area-10.jpeg",
+    "/assets/apartment-3/area-2.jpeg",
+    "/assets/apartment-3/area-3.jpeg",
+    "/assets/apartment-3/area-4.jpeg",
+    "/assets/apartment-3/area-5.jpeg",
+    "/assets/apartment-3/area-6.jpeg",
+    "/assets/apartment-3/area-7.jpeg",
+    "/assets/apartment-3/area-8.jpeg",
+    "/assets/apartment-3/area-9.jpeg"
+]
   },
   highlights: [
     'City Views'
